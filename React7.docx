@@ -1,0 +1,138 @@
+
+   
+   
+   if multiple module have same name members then you have to imp using "aliasing" technique
+
+	import {A as module1} from "module1"
+	import {A as module2} from "module2"
+   
+   Component:-
+   
+   when we create any component 
+   
+   summary
+   
+   javascript module
+   module system
+	CJS UMD AMD etc.
+	export , default, import
+	aliasing
+	
+-Component in react vite app:
+
+ -it is mandatory to keep all components in "src" folder.
+ -Every component can have 3 files 
+	a) .jsx
+	b) .css
+	c) spec.js (or) .test.js
+	
+ -JSX file comprises of presentation & logic 
+ -css file compreses of styles.
+ -spec/test files comprises of test methods for testing component functions & UI.
+ 
+	 
+		login.jsx
+		login.css
+		login.spec.js (or) login.test.js
+	
+	
+	-Every component can be a function or class.
+	-component name must start with an uppercase letter.
+	-component must return a jsx element as one fragment.
+	-jsx fragment can be anyone of the following
+		
+		a) A semantic or non-semantic element of html
+		<header> <div> <main> <nav> etc.
+		 
+		b) An empty fragment without dynamic features
+			<>
+				.... your content
+			</>
+			
+		c)React.Fragment
+			<React.Fragment>
+				....your content
+			</React.Fragment>
+	
+	
+	
+	
+	-JSX element must have and token.
+	-jsx element will not allow attributes. You hav eto use properties.
+	-Component styles are defined in a css file or configured inline.
+	-Make sure that style are not defined using "type selector".
+	[use type selector if you want element same across all components]
+	-css files must be imported into component
+	
+		import './register.css';
+		
+		Enable bootstrap fo react vite app
+		istall bootstrap for project
+		
+		>npm install bootstrap bootstrap-icons --save
+	-import bootstrap files into "main.jsx"
+		import '../node_module/bootstrap/dist/css/bootstrap.css;
+		import '../node_module/bootstrap-icons/font/bootstrap-icons.css';
+		
+	Note: You can install the extension for vs code 
+	
+	"inteliSense for css class Names in HTML".
+	
+	you can directly uses bootstrap and icon classes for elements
+	
+	<li className ="bi bi-facebook'></li>
+	<input type="text" className="form-control"/>
+	
+   
+		
+ex:
+	components/register/register.jsx
+
+react support one way binding here we use explicitly two way binding 
+angular support two way binding here implicitly we can use two way binding
+
+React Data Binding
+Data binding is a technique of accessing data from source and bind to UI elements. it identifies the changes in UI and updates into source.
+-Data binding techniques are classified into 2 types.
+1. One Way Binding
+2. Two Way Binding
+
+React implicitly support One way Binding.
+-It makes the data in UI elements read-only.
+-You can bind data using a data binding expression "{}".
+
+syntax
+	var user = "John";
+	<p> Hello!{user} </p>
+	<input type="text" value={user}/>
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

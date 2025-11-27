@@ -1,0 +1,47 @@
+
+
+React Data Binding
+Data binding is a technique of accessing data from source and bind to UI elements. it identifies the changes in UI and updates into source.
+-Data binding techniques are classified into 2 types.
+1. One Way Binding
+2. Two Way Binding
+
+React implicitly support One way Binding.
+-It makes the data in UI elements read-only.
+-You can bind data using a data binding expression "{}".
+
+syntax
+	var user = "John";
+	<p> Hello!{user} </p>
+	<input type="text" value={user}/>
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

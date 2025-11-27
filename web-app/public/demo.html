@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<script type="module" >
+  // import hello,{uname,User} from "../src/home.js";
+  // import {Add} from "../src/math.js";
+  // let obj = new User();
+  // document.querySelector('p').innerHTML = `<h2>${uname}</h2>${hello()} <br/>${obj.Welcome()}<br/> ${Add(5,10)}`;
+
+
+// import sub, * as calculations from "../src/math.js";
+
+// document.querySelector('p').innerHTML = `Addition: ${calculations.Add(5,10)} <br/> multiplication: ${calculations.Mul(5,10)} <br/> subraction: ${sub(10,5)}`;
+
+
+import {title as home_title} from "../src/home.js";
+import {title as Math_title} from "../src/math.js";
+
+document.querySelector('p').innerHTML = `<h2>${home_title()}</h2><h2>${Math_title()}</h2>`;
+
+</script>
+</head>
+<body>
+  <p>mahesh</p>
+</body>
+</html>

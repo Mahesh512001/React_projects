@@ -1,0 +1,10 @@
+.bg-image{
+  background-image: url('netflix.jpg.webp');
+  background-size: cover;
+  height: 100vh;
+
+}
+.bg-shade{
+  background-color: rgba(0,0,0,0.5);
+  height: 100vh;
+}

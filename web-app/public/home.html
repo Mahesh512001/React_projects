@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .form-container {
+        border: 1px solid gray;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(33, 22, 22, 0.697);
+      }
+      div {
+        margin-top: 10px;
+      }
+      details {
+        margin-top: 15px;
+        cursor: pointer;
+      }
+    </style>
+
+    <script
+      src="../node_modules/react/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="../node_modules/react-dom/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+
+    <script type="text/babel">
+      /*React upto 17 version  
+ ReactDOM.render("Welcome to React 17 ",document.getElementById("root"));
+
+ */
+
+      function ForgotCredentials() {
+        return (
+          <details>
+            <summary>Forgot password ?</summary>
+            <div>
+              <a href="#">Recover Password</a>
+            </div>
+            <div>
+              <a href="#">Forgot User Id</a>
+            </div>
+          </details>
+        );
+      }
+
+      function Login() {
+        return (
+          <div className="container-fluid">
+            <form className="form-container">
+              <h1> Login Component</h1>
+              <dl>
+                <dt> User Name</dt>
+                <dd>
+                  <input type="text" />
+                </dd>
+                <dt> Password</dt>
+                <dd>
+                  <input type="text" />
+                </dd>
+              </dl>
+              <button>Login</button>
+              <ForgotCredentials />
+            </form>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root")); //React 18 version
+      root.render(
+        <section>
+          {" "}
+          <Login />
+        </section>
+      );
+    </script>
+  </head>
+  <body>
+    <noscript> please enable javascript to run this app. </noscript>
+    <div id="root"></div>
+  </body>
+</html>

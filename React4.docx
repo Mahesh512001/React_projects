@@ -1,0 +1,187 @@
+
+	
+	//React 17x
+	
+	ReactDOM.render("massage | component",document.getElementById("root"));
+	
+	//React 18x
+
+ const root  = ReactDOM.createRoot(document.getElementById("root"));
+ root.render("massage|component");
+ 
+ 
+ You can install all libraries into project
+ 
+		>npm install react@18 react-dom@18 @babel/standalone --save 
+		
+		    <script src="../node_modules/react/umd/react.development.js" crossorigin></script>
+			<script src="../node_modules/react-dom/umd/react-dom.development.js" crossorigin></script>
+			<script src="../node_modules/@babel/standalone/babel.js"></script>
+		
+		-All library files are copied into "node_modules".
+ 
+ 
+	Note: 
+			React 19x is a complete re-write of react with "React Fiber" library.
+			React libraries are built by using "typeScript" language [Native Libraries]
+	
+React Components:
+ a component is a reusable disign with styeles and logic techincally comprises of 
+ -presentation
+ -Style
+ -functonality
+
+Presentation with HTML 
+Sytles with CSST
+functionality with JSX or TSX	
+
+jsx = javascript XML  by using this lagnuage we write the functionality 
+
+Components based design allows
+
+	a) Reusability
+	b) Extensibility
+	c) Seration
+	d) Maintainability
+	e) Testability
+	
+	Designing a component
+..............................................................	
+	issue with oop								|
+	tedious										|
+	slow										|
+	more memory									|
+	can't directly interact with hardware]		|
+												|
+........................................................	
+
+	-A component is designed by using javascript "function" or "class" 
+	-Class components are still supported in React but not recommended for modern code.
+
+	-function Declaration
+	-function expression
+	-function Signature
+	-function Defination
+	-function parameter
+	-function Operators
+	-function Generator
+	-Async Function
+	-Function Callback
+	-Function Promise
+	-Function Recursion
+	-Function Cosure
+	-pure and Impure Function
+	-Anonymous Function
+	-IIFE pattern
+	
+Function component
+	1. you can configure a function by using 2 techniques
+	
+	a) Declaration 
+	b) Expression
+	
+	syntax : Declaration
+	
+	function Login() 
+	{
+	-------------
+	}
+	
+	syntax: Expression
+	
+	let Login = function () {
+		-------------
+	}
+
+FAQ : what is difference between declartion an expression 
+Ans. 	Expression will not allow hoisting
+		Declaration allows hoisting.
+
+2.  Function component must return markup
+	so it can't be void type. it should return of jsx element 
+	
+	function Login() {
+	
+	return (<jsxElement></jsxElement>);
+
+	-Function component must return only "one _Fragment_"
+----------------------------------------------
+		function Login() 
+	{
+	return (
+	    <h1> Login Component</h1>		*Error(not valid)
+		<form> </form>
+	)
+	}
+-------------------------------------------------------------------
+	
+		function Login() 
+	{
+	return (
+	<>
+	    <h1> Login Component</h1>		*( valid)
+		<form> </form>
+	</>
+	)
+	}
+-----------------------------------------------------------	
+(WHATWG) community 	
+part of elements (catogories)
+
+	-Noraml elements
+	-void elements
+	-rc data elements
+	-raw text elements
+	-foreign element
+	
+------------------------------------------
+
+	-Every jsx element must have "end token".
+	
+	<img>  		//invalid
+	<img></img> 	valid
+	<img />  		self enging
+
+	- JSX element can't have "attirbutes" it must use only "porperty"
+	
+	<img class="img-fluid"/>  /invailid class in an attributes
+	<img className = "img-fluid" /> valid className is a property
+
+FAQ: what is difference between an attirbutes & property
+Ans : Attribute is immutable and property is mutable
+
+
+ -A component can be accessed as "Token".
+ 
+ <Login/>
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

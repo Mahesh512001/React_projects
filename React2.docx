@@ -1,0 +1,203 @@
+
+
+what are the Features of React?
+
+ 
+ 
+ 
+ that is principle of any program  DRY (don't reapeat your self)
+ 
+rewrite  no
+reuse yes
+
+
+<input type="date"> it's knon as element but it's is component like date picker
+
+Features of React:
+1. it's component based.
+		-Component comprises of markup syles & logic.
+		-Easy to reuse & extend.
+		-Easy maintain and test
+		-Faster in building application
+		
+2. it's moduler
+		-it is light weight
+		-it uses less memory
+		-it is faster in interactions.
+
+3. it usese "Virtual Dom"
+		-Fast in rendering output.
+
+4. it uses One Way Binding
+		-Data binding is One way implicitly.
+		-You need to configure two way binding expllicitly.
+			
+
+FAQ's:
+
+what is dom(do me is hirarachy of elements of this page)
+
+
+how dom is formed?
+
+Markup=> Bytes=> Chars=>Tokens=>node([element])=>Dom=>layout=>rendering=>paint
+
+
+what is shadow DOM?
+
+hirarachy of elements in a component[shadow-root]
+
+what is virtual dom?
+it is a copy of acutual DOM in memory.
+it makes the rendering fast However it requires updates into Actual DOM.
+
+
+
+Issues With React:
+
+	-Virtual DOM in memory 
+	-Implicit one way binding
+	-Lot of 3rd party integration required
+	-Lot of Gap's
+	
+	
+	Setup Developement Environment for React:
+	
+		-Sandbox server(Repository)
+		-development server(Appliction)
+		-quality server
+		-production server(Go-live)
+	
+	minified files like (production files) style.min.css/index.min.js
+	
+	dist/build
+	
+	 
+	Developement
+	quality
+	production
+	
+	
+React in existing web Application:
+
+1. create a new folder for project at any location on your device 
+	
+2. Open project folder in visual studino code editor
+3. Run the following command in project terminal
+> npm init -y 
+(it generate "package.json", which comprises of project meta data.)
+
+4. Add following files & folder into project
+			README.md files
+
+			File/Folder				Description
+			Package.json			project meta data
+			Readme.md				help document by developer for developers
+			.gitignore 				congiguration of files to ignore while publishing on to GIT
+			public 					comprises of static resources like HTML, Images , documents[pdf,docx,xslx,mkv, avi, json]
+			src 					comprises of dynamic resources like sass, css , js jsx ts, tsx etc
+			index.html 				startup page for application
+
+	
+5.Add a new page "home.html" into public folder
+
+6. Add <noscript>element into body section it is used to verify the status of javascript in browser.
+
+		<noscript>
+			please enable jabascript on your browser
+		</noscript>
+		
+7. Add a root container into actual DOM which renders the content from Virtual DOM
+
+			<div id="root"></div>
+
+8. To enable React in any HTML page you need following libraries
+
+		a) React	  : it is the core react library that provides all react function.
+		b) react-dom  : it is library of creating and handling Virtual Dom.
+		c) babel	  : it is a javascript compiler
+		
+		javascript? javascript is a light weight interpreted and jit compiled programming language. 
+		jit -> just in  time
+		aot -> head of time
+		
+	-React upto 18x version provides CDN for 'react & react-dom'.
+		https://legacy.reactjs.org/ => docs => CDN
+		
+		-Copy cd for developement environment and paste into your HTML page <head> section.
+		
+		<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+	-Go to babel official website
+	
+	https://babeljs.io/ => docs => integrated Packages => @babe/shtandlone
+	
+	-Copy standlone CDN and paste into HTML page <head> below react-dom library.
+	
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		
+	-Add <script> element into <head> section with type as "text/babel"
+	<script type="text/babel">
+	</script>
+	
+	.Create a  virtual DOM and render into actual DOM 
+	
+	//React 17x
+	
+	ReactDOM.render("massage | component",document.getElementById("root"));
+	
+	//React 18x
+
+ const root  = ReactDOM.createRoot(document.getElementById("root"));
+ root.render("massage|component");
+ 
+ 
+ You can install all libraries into project
+ 
+		>npm install react@18 react-dom@18 @babel/standalone --save 
+		
+		    <script src="../node_modules/react/umd/react.development.js" crossorigin></script>
+			<script src="../node_modules/react-dom/umd/react-dom.development.js" crossorigin></script>
+			<script src="../node_modules/@babel/standalone/babel.js"></script>
+		
+		-All library files are copied into "node_modules".
+ 
+ 
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

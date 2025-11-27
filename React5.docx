@@ -1,0 +1,46 @@
+
+
+
+	- JSX element can't have "attirbutes" it must use only "porperty"
+	
+	<img class="img-fluid"/>  /invailid class in an attributes
+	<img className = "img-fluid" /> valid className is a property
+
+FAQ: what is difference between an attirbutes & property
+Ans : Attribute is immutable and property is mutable
+
+
+ -A component can be accessed as "Token".
+ 
+ <Login/>
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

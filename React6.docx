@@ -1,0 +1,152 @@
+
+		
+		http://localhost:5173
+		
+	You can request the URL from any browser.
+	
+FAQ :  What is this "npm run" used for?
+Ans it is used for executing batch program.
+
+FAQ what is batch program?
+Ans: A sequence of operations or action are defined under one reference name so that you can execute in the same sequence every time just time just by using reference name.
+
+	Batch program is a reference name with sequence of operatons.
+	
+FAQ: How to create batch job for your project?
+Ans: By using "script" in package.json
+	
+	"script": {
+	"bootstrap":"npm install bootstrap bootstrap-icon --save",
+	"shorthand": "complete list of action to perform"
+	}
+	
+	>npm run shorthand
+	>npm run bootstrap
+	
+	You can terminate batch job using "ctrl + c"
+
+		Javascript - Module - System
+
+Modular means (part by part)[ before that all are lagacy]
+
+-modular refers to part-by-part
+-modular approach allows to use application specific framework or library.
+-in includes only the required library for application.
+it enables
+	a) Reusability
+	b) Extensibility
+	c) Maintanability
+	d) Testability
+-It makes application light weight and faster in interactions.
+-To use modular approach in javaScript it requires various module systems to setup for project.
+	a) Common JS
+	b) UMD(Universal Module Distribution)
+	c) AMD(Asunchronous Module Distribution)
+	d)ESModule etc.
+	
+-Javascript in browser uses ESModule, which is the default for browser.
+
+
+Module
+-Javascript file is considered as a module in JS library.
+
+Module
+-Javascript file is considered as a Module in JS library.
+
+		home.js 		//home  -is module name
+		
+-module can have a set of
+	a) variables
+	b) functions
+	c) classes
+
+- Every member in a module is not accessible outside the module scope.
+- If you want to access any member outside module scope then you have to mark it as "export".
+
+export const name = value;
+exprot function name() {}
+export class name{}
+
+-You can import into any page and use in application
+
+	import {name} from "moduleName";	ESmodule System
+	
+	const ref = rquire("moduleName");	//CJS Require JS
+	ref.name;
+	
+- You can export any member after configration by using "default".
+	
+	const Hello = function() {
+	
+	}
+	
+	export default hello;
+	
+-Every module can have only one default export.
+-Default member is imported without a "{}" block.
+-it can't be the last be import.
+
+		import defaltMember, {other} from "moduleName";
+		
+	You can import library from multiple modules.
+	
+	import {a} from "module1";
+	import {b} from "module2";
+	
+   -You can import all member by using aliasing.
+   
+   import * as aliasName from "module";
+   aliasName.member;
+   
+   Note:  Default member can't be imported using aliasing.
+   import defaultMember, * as aliasName from "module";
+   
+   
+   if multiple module have same name members then you have to imp using "aliasing" technique
+
+	import {A as module1} from "module1"
+	import {A as module2} from "module2"
+   
+   Component:-
+   
+   when we create any component 
+   
+   
+		
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
