@@ -1,0 +1,101 @@
+<!-- <script>
+ var collection = [10, 20, 30 , 40 , 50];
+ var a  = collection [0];
+ var [a, b, c,d,e] = collection;
+ document.write("Value of a : " + a + "<br>");
+ document.write("Value of b : " + b + "<br>");    
+  document.write("Value of c : " + c + "<br>");
+  document.write("Value of d : " + d + "<br>");
+  document.write("Value of e : " + e + "<br>");
+  //array destructuring
+
+</script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <script>
+
+var categories = ["All", "Electronics", "Fashion"];
+function bodyload() {
+  categories.map(categories =>{
+    var option = document.createElement("option");
+    option.text = categories;
+    document.querySelector("select").appendChild(option);
+
+    var li = document.createElement("li");
+    li.textContent = categories;
+    document.querySelector("ol").appendChild(li);
+  })
+}
+
+  </script> -->
+
+  <!-- <script>
+
+function Navclick() {
+  alert("Navbar clicked");  
+}
+
+function SearchClick(e) {
+  e.stopPropagation();
+  alert("Search button clicked");
+}
+  </script> -->
+
+<!-- <script>
+function Submit(e) {
+  e.preventDefault();
+  alert("Form submitted");
+}
+</script> -->
+
+<script>
+  function Start() {
+     console.log("call start");   //General Task
+
+     setTimeout(() =>{            //Macrotask
+      console.log("timeout ending")
+     },0);
+
+     Promise.resolve("promise resolved").then(() =>{  //microtask
+      console.log("promise then");
+     })
+      console.log("end of start");       //General Task
+  }
+// output first call start, end of start, promise then, timeout ending
+
+
+// ordeer of loop 
+// general task
+// micro task
+// macro task
+
+
+</script>
+</head>
+<!-- <body onload="bodyload()">
+  <select name="" id="">
+
+  </select>
+  <ol>
+
+  </ol> -->
+<body>
+  <!-- <nav style="border:1px solid black; padding:10px;"  onclick="Navclick()">
+    <h2>Navbar</h2>
+    <button onclick="SearchClick()">Search</button>
+  </nav> -->
+
+  <!-- <form action="#" onsubmit="Submit()">
+  
+   Name: <input type="text" name="ussername">
+    <button>Submit</button>
+
+  </form> -->
+  <button onclick="Start()">Click Me</button>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+.fakestore-container{
+    height: 500px;
+   
+}
+.fakestore-card{
+  width:220px
+}
+
+.fakestore-card-header{
+  height:150px;
+}
+.fakestore-img-top{
+  height:200px;
+  object-fit:contain;
+}

@@ -1,0 +1,28 @@
+{
+  
+  "title":"Apple iphone 16 (white, 256 GB)  (6 GB RAM)",
+  "price":79999,
+  "rating":{
+    "rate":4.5,
+    "ratings":2900,
+    "reviews":534345
+  },
+ 
+
+  "image":"iphone16.webp",
+
+  "offers":[
+    {
+      "offerType":"Bank Offer",
+      "description":"10% off on Axis Bank Credit Card, up to ₹1500. On orders of ₹5000 and above"
+    },
+    {
+      "offerType":"Special Price",
+      "description":"Get extra ₹3000 off (price inclusive of discount)"
+    },
+    {
+      "offerType":"No Cost EMI",
+      "description":"Avail No Cost EMI on select cards for orders above ₹3000"
+    }
+  ]
+}

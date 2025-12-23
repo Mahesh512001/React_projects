@@ -15,30 +15,368 @@ syntax
 	<p> Hello!{user} </p>
 	<input type="text" value={user}/>
 
+Note:   Variables are not recommended to handle data in a component.
+		They are immutable, and component requires mutable reference.
 
+State in component
+  -Web applications use "http / https" as protocals
+  -they are stateless protocalls.
+  they can't remember data between requests.
+  -hence various state management techniques are required to handle data for component.
+  
+ Local State: 
+	-A React Component comprises of various phases
+	
+	create component => mout component => update component => unmout
+	
+	-A local state is configured for comonent while creating the component.
+	-Local state can handle any type of data
+				a) Primitive
+				b)Non Primitive
+	-You can access the local state by using  a React Hook "useState()"
+	
+	-Hook is aservice that provides pre-functionality, which you customize and implement according to the requirements.
+	-Technically hook is function.
+	-useState() hook return  2 references 
+	a) getter for reading and returning value 
+	b)setter 	for assingning a new value
+	
+Syntax: 
 
+		const [getter,setter] = use State(value);
+		
+		const [user setUser] =useState('john');
+		
+		const [stock, setStock] = useState(true);
+		
+		const [products, setProducts] = useState(['tv','mobile']);
+		
 
+	FAQ's:
+	
+	1. can we use var or let keywords for configuring useState()?
+	A: Yes But not recommended.
+	
+	2. Why var & let not recommended for state?
+	A: State requires intialization. it should not allow declaring & assignment.
+	var & let  can skip initialization. Hence they are not recommended. 
+	
+	3. How you can assign a new valueusing setter if state is configured with "const"?
+	A. By re-initializing memory for const you set a new value.
+	
+	Syntax:
+			const[user,setUser] = useState("john");
+			setUser = "david"  //invailid
+			setUser("david");		//valid
+			
+	-You can not set state while creating a component.
+	-State allows to set value "on mount" or "on update".
+	
+	-Component mout and unmout can be configured by using the hook "useEffect()".
+	
+	Syntax: 
+	
+			useEffect(() => {},[dependencies])
+			
+	-Component mounts only once.
+	-If you want a component to remount then, you have to configure the dependencies.
+	-So that component can remount when ever dependency changes.
+	
+	
+	Handling various Data types in React:
+	1. Number 
+		-A number can be ay one of the follwing
+				Signed integer
+				unsigne integer
+				float
+				double
+				decimal
+				exponent
+				binary
+				hexadecimal
+				octa 
+			Big In [245334534n]
+	-Number methods are same as in js
+		toFixed()
+		toPrecision()
+		toLocalString()
+	-Parsing is same
+		parseInt()
+		parseFloat()
+	-Verifyint number is same
+		isNaN ()
+	
+	Data Binding
+	useState()
+	useEffect()
+	Handle Various Data Types 
+	
+	-Number
+		toFixed()
+		toPrecision()
+		toLocaleString()
+	-String
+		-String formatting
+		-String configuration
+		-String manipulation
+		
+	-Boolean Types
+		-True 
+		-False
+		
+		Boolean types handles "true" & "false"
+		-act can use booleand value but can't display the boolean value.
+		-You have to render conditional data using boolean.
+	Note: jsx will not allow any statement inside JSX element.
+	-You have to handle all actions on boolean by using operators or methods.
+syntax:
+		const[stock, setStock] = useState(true);
+		<p>{stock ? "in stock" : "not in stock"}</p>
+	
 
+Null Type:
+		-It is used to define values at runtime.
+		-If avalue is not probided into reference at runtime then it uses "null",
+		-React can't display null, but can use null as keyword.
+syntax:
+		const [price , setPrice]  = useState();
+		setPrice(prompt("Enter Price"));
+		<p>{(price === null) ? "price Required": price}</p>
+
+Symbol Type 
+		-it is same as in JS 
+		- it is used to hide a key in object
+		-
+syntax 	
+		var id = Symbol();
+		var product= {
+			[id]: 1;
+			name: "tv"
+			qty: 5
+		}
+		
+		product[id]		//to access individually.
+
+	Array Type
+		{
+			-All array rules same as in JS
+			-Array configuration
+			-Array Elements.
+			-Array Methods.
+			-Array distructure is same in js.
+			-Array spread approach is same.
+			
+		}
+		
+Object Type
+		-Object configuration with key & value is same as in JS.
+		Object manipulation is also same.
+	Syntax: 
+			const[product] = useState({key:value, key:value});
+			-Reading all keys from object
+			a)for..in
+			b)Object.key()
+			
+			-Delete a key from object
+			a) delete operator
+			
+			-Hide a key in object 
+			a) symbol data type
+			
+			-Verify keys
+			a)"in" operator
+	
+	Syntax: 
+			const [product] = useState({id:1, Name:"TV", ShippedTo:["delhi","hyd"], Rating:{rate:4.5,count:3500}});
+	
+	
+	<p>{product.Name}</p>
+	<p> {product.Rating.rate}</p>
+	{
+		product.ShippedTo.map(item => <div key={item}>{item} </div>)
+	}
+	
+
+Array 	 []
+Object 	 {}
+Data 	[{}, {}]
+
+map Type:
+	-Map is a key & value collection.
+	-Key & value can be any type.
+	-All interations are handled by implicit methods.
+	it is faster in interactions when compared to object.
+	it is schema less[structure less].
+	
+Syntax: 
+		const[data] = useState(new map());
+		
+		data.set()
+		data.get()
+		data.delete()
+		data.clear()
+		data.has()
+		data.keys()
+		data.values()
+		data.entries() etc......
+		
+Ex:	
+		data.set(key,value)
+		data.get(key)
+		
+	Date Type
+			-Date & Time value are configured using "Date()" constructor.
+			
+			Date & Time methods are same as in JS.
+			
+		getHours()			setHours()
+		getMinutes()		setMinutes()
+		getSeconds()		setDate() etc.....
+		getMilliSeconds()
+		getDay()
+		getDate()
+		getMonth()
+		getFullYear()
+		toDateString()
+		toTimeSring()
+		toLocalDateSring()
+		toLocalTimeString()   
+						
+			etc.........
+		
+	-React uses 3rd party date libraries to manipulate date and time values.
+	-The popular 3rd party date libraries for React
+		a)Moment
+		b)Day.js
+		c)Luxon
+		
+Setup Moment library for React App:
+	
+	1. Install library
+				>npm install moment --save
+	2.import moment into component.
+	import moment form "moment
+	
+	3.Configure date
+		const[departure] = useState(new Date());
+		
+	4. Display date using moment
+			{moment(departure).format("date &time literals")}
+			
+			ddd 	short week day
+			dddd 	long week day
+			DD 		date number
+			MM 		month number
+			MMM 	short month name
+			MMMM 	long month name
+			YY 		short year number
+			YYYY	 long year number
+		
+	Ex:
+			{moment(departure).format("DD dddd, MMMM YYYY)}
+	Note: Input date format must be always "year-month-day hrs:min:sec.milliSec".
+	
+	 
+Regular Expression Type
+	
+		-it is same as in JS.
+		- it is used to verify format of input value by using meta characters & quantifiers.
+		-it is enclosed in "//"
+		-it is verified using string "match()" method.
+		
+	Syntax:
+			const [mobile] = useState("9876543210");
+			{(Mobile.match(/+91\d{10}/)? "verified" : "invailid"
+	
+	Summary:
+	
+	- number
+	- string
+	- boolean
+	- null
+	- undefined
+	- symbol
+	- big int
+	- array
+	- object
+	- map
+	- date
+	- regular expression
+	
+	
+			Distributed computing
+	
+-Distributed computing allows communication between two applications running on two 
+different machines.
+
+-it also allows communication between two object in two different process of same machine.
 
 	
+	Distributed Technologies
 	
+	CORBA			common object Request Broken Architecure[14 languages]
+	DCOM 			Distribute component object model[visual Basic]
+	RMI 			Remote method Invocation[J2EE]
+	Java Beans		Java
+	Remoting		.NET
+	Webservice		All technologies[c, java, .net , php, python etc..]
 	
+	Communication Specificatioins:
+
+		SOAP 	[Service Oriented Architecure Protocol]
+		REST	[representational State Transfer]
+		JSON 	[Javascript Object Notation]
+
+	SOAP
+		-services consumer sends xml request
+		-Server provider sends xml response
 	
+		Request:
+				<Products>
+					<product>
+						<Category>Electronics</Category>
+					</product>
+				</Products>
+		Response:
+				<Products>
+					<product>
+						<id>4</id>
+						<Name>Tv</Name>
+						<Category><Electronics</Category>
+					</product>
+					.....
+				</Products>
+					
+	REST
+			-Consumer sends a query request.
+			-Provider sends XML or JSON.
+			
+		Request:
+				https://server.com/data/products?category=electronics
+				http://server.com /data/products/electronics
+
+		Response
+			[
+				{id:4, Name:'TV", Category:"Electronics"},
+				.....
+			]
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	JSON 
+		-consumer sends json request.
+		-provider sends JSON response.
+
+issue with web services:
+		-it uses soap
+		-it can be used only on http or https.
+		-it can run only on web server.
+		-XML 
+
+API
+	-applicaton programming Interface
+	-it uses REST & JSON
+	-it can be used on any protocol.
+	-it can run on any server
+	-it is available across all devices and OS services.
 	
 	
 	

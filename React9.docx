@@ -1,0 +1,261 @@
+
+	
+	
+			Distributed computing
+	
+-Distributed computing allows communication between two applications running on two 
+different machines.
+
+-it also allows communication between two object in two different process of same machine.
+
+	
+	Distributed Technologies
+	
+	CORBA			common object Request Broken Architecure[14 languages]
+	DCOM 			Distribute component object model[visual Basic]
+	RMI 			Remote method Invocation[J2EE]
+	Java Beans		Java
+	Remoting		.NET
+	Webservice		All technologies[c, java, .net , php, python etc..]
+	
+	Communication Specificatioins:
+
+		SOAP 	[Service Oriented Architecure Protocol]
+		REST	[representational State Transfer]
+		JSON 	[Javascript Object Notation]
+
+	SOAP
+		-services consumer sends xml request
+		-Server provider sends xml response
+	
+		Request:
+				<Products>
+					<product>
+						<Category>Electronics</Category>
+					</product>
+				</Products>
+		Response:
+				<Products>
+					<product>
+						<id>4</id>
+						<Name>Tv</Name>
+						<Category><Electronics</Category>
+					</product>
+					.....
+				</Products>
+					
+	REST
+			-Consumer sends a query request.
+			-Provider sends XML or JSON.
+			
+		Request:
+				https://server.com/data/products?category=electronics
+				http://server.com /data/products/electronics
+
+		Response
+			[
+				{id:4, Name:'TV", Category:"Electronics"},
+				.....
+			]
+	
+	JSON 
+		-consumer sends json request.
+		-provider sends JSON response.
+
+issue with web services:
+		-it uses soap
+		-it can be used only on http or https.
+		-it can run only on web server.
+		-XML 
+
+API
+	-applicaton programming Interface
+	-it uses REST & JSON
+	-it can be used on any protocol.
+	-it can run on any server
+	-it is available across all devices and OS services.
+	
+	
+	 JavaScript AJAX techiniques:
+	 
+	1. XMLHttpsRequest
+			-it is browser object used to make AJAX calls in browser
+			-it is native object of borwser
+			
+	 
+	a) Configure a reference for XMLHttpsRequest
+	
+		let http = new XMLHttpsRequest();
+		
+	b) Configure the request by using "open()" method
+	http.open("method","url", async:boolean);
+	
+	method 		:GET, POST, PUT, PATCH, PURGE, DELETE
+	url 		: refers to request path
+	async 		:true will use unblocking technique false with use bloking technique.
+	c) Send the request by using "send()" method
+			http.send();
+	d) Execute request by using "onreadystatechange" event
+	
+	http.onreadystatechange = function() {
+	
+	}
+	
+	-Request is processed in 4 states
+		1  	initial
+		2  	Success
+		3  	Complete State
+		4	Ready State
+	
+	classless inter domine routing
+	
+	e) Fetch data on ready state
+	
+		if(http.readyState === 4)
+	{
+		// you can acess the response
+		// response can be in various format
+		
+		http.responseText 	[string format]
+		http.respnseXML		[xml format]
+	}
+		
+		The default respnse format is"text".
+		if your data is not text or xml then itrequires explicit parsing.
+	
+	
+1. XMLHttpsRequest in React
+	
+	-React can use XMLHttpsRequest object
+	-it can handle AJAXrequestusing XMLHttpRequest
+
+Issues	
+	 -it is browser object
+	 -React uses Virtual DOM,hencebrowser object are not recommended.
+	 -it is not async by default it requires explicit async configuration.
+	 -it return response in Text OR XML only. it requires explicit conversions for other data types.
+	 -Converting datamy lead to CORS issues.
+	 -Secuirity issues
+	 -It is not good in error handling.
+	 
+2. Javascript "fetch()" promise
+
+ - Promise is async by default
+ - It returns data in binary format.
+ - It requires explicit conversions.
+ - It is simplified when compared to XMLHttpRequest.
+ - It is better in error handling.
+ 
+Syntax:
+		fetch("url")
+		.then(function(response){return response.json()})
+		.then(function(data){})
+		.catch(function(error) {})
+		.finally(function() {'excecute always'})
+	 
+	 
+issues  with fetch() in react
+
+	-it returns data in binary.
+	-Explicit conversions are required.[COM to Marshal]
+	-CORS issues.
+	- XSRF issues [Cross Site Request Forgery]
+	-XSS issues [Cross site SCripting attacks]
+	-You can't cancel the request.
+	
+3. Using 3rd party React Libraries
+		-There are various 3rd party libraries designed for handling AJAX request in React.  
+		-axios 
+		-WhatwgFetch
+		-telerik 
+		-Jquery AJAX etc...
+		
+Axios for React:
+
+		-it is promise based
+		-it is async by default.
+		-it returns rsponse with various details like
+			a)statusCode
+			b)statusText
+			c)data
+			d)headers etc.
+		-Data is in it's native format.
+		-Explicit conversions are not required
+		-Better in handling CORS XSS XSRF etc.
+		- it can cancel reqeust
+		- It can handle multiple request simultaneously at the same time.
+		
+		
+1. Install axios for your project
+		>npm install axios --save
+		
+2. Import axios into component and configure the Request
+
+		import axios from "axios";
+		
+		axios.get()		for fetch
+		axios.post()	for save
+		axios.put()		for update/modify
+		axios.delete()	for delete
+		
+		
+		Syntax:
+				axios.get('URL')
+						.then(function(response){
+				respnse.status
+				respnse.statusText
+				respnse.headers
+				rsponse.data
+				})
+				.catch(function(error){
+				//on error
+				})
+				.finally(function() {
+					//always inovked
+				})
+				
+	Ex. FakeStore API
+		https://fakestoreapi.com
+		
+		GET 	/porducts 	[{},{}]
+		GET		/Product/2	{}
+		GET		/product/categories	['']
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
